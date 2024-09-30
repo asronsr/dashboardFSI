@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-white">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../dist/assets/css/app.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      <title>FrogsID - Dashboard V3</title>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+   </head>
+   <body class="antialiased h-full">
+      <div>
+         <header>
+            <div class="sticky top-0 z-40 flex h-10 shrink-0 items-center justify-center px-4 shadow-sm border-b-2 border-blue-500 sm:gap-x-6 sm:px-4">
+               <h1 class="text-lg uppercase font-semibold">Operasional Dashboard 2024</h1>
+            </div>
+            <div class="flex h-10 shrink-0 items-center justify-center px-4 shadow-sm border-b-2 border-blue-500 sm:gap-x-6 sm:px-4">
+               <p class="text-lg uppercase font-semibold">Distrik Sebulu</p>
+            </div>
+            <p class="text-lg text-center uppercase font-semibold">PT. Surya Hutani Jaya - Kalimantan Timur</p>
+         </header>
+
+         <main class="w-full py-2">
+            <div class="px-2">
+               <div class="grid grid-cols-1 md:grid-cols-12 gap-2">
+                  <div class="col-span-3">
+                     <div class="grid gap-2">
+                        <div class="border-2 border-orange-400 shadow">
+                           <div class="w-1/2 bg-amber-300">
+                              <p class="text-sm font-semibold pl-5">Drone Sprayer</p>
+                           </div>
+                           <div class="p-4 grid grid-cols-2 gap-x-3">
+                              <div class="text-center text-xs">
+                                 <img src="../dist/assets/img/drone-sprayer-sekar-cover.png" alt="drone">
+                                 <h3 class="uppercase font-semibold">Drone P2</h3>
+                                 <p>18 Oktober 2021</p>
+                              </div>
+                              <div class="text-center text-xs">
+                                 <img src="../dist/assets/img/drone-sprayer-sekar-cover.png" alt="drone">
+                                 <h3 class="uppercase font-semibold">Drone P3 Baru</h3>
+                                 <p>13 Oktober 2022</p>
+                              </div>
+                           </div>
+                           <div class="text-xs text-center">
+                              <p class="font-semibold">Age</p>
+                              <div class="grid grid-cols-2 text-xs">
+                                 <div class="text-center">
+                                    <p>2Th11Bln</p>
+                                 </div>
+                                 <div class="text-center">
+                                    <p>1Th11Bln</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="text-xs text-center bg-amber-300">
+                              <p class="font-semibold">Maintenance Schedule</p>
+                              <div class="mt-1 grid grid-cols-2 text-xs">
+                                 <div class="text-center">
+                                    <p>?</p>
+                                 </div>
+                                 <div class="text-center">
+                                    <p>?</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="text-xs text-center">
+                              <p class="font-semibold">PIC</p>
+                              <div class="grid grid-cols-2 text-xs">
+                                 <div class="text-center">
+                                    <p>Dimas</p>
+                                 </div>
+                                 <div class="text-center">
+                                    <p>Dimas</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="mt-1 text-xs text-center">
+                              <p class="font-semibold">Historical Crash Count</p>
+                              <div class="py-2 grid grid-cols-2 text-xs">
+                                 <div class="text-center">
+                                    <p>24</p>
+                                 </div>
+                                 <div class="text-center">
+                                    <p>3</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="border-2 border-orange-400 shadow">
+                           <div class="w-1/2 bg-amber-300">
+                              <p class="text-sm font-semibold pl-5">Baterai Drone</p>
+                           </div>
+                           <div class="p-1">
+                              <div class="grid grid-cols-4 text-xs">
+                                 <div>Jumlah Materai</div>
+                                 <div class="font-semibold">4</div>
+                                 <div>Unit</div>
+                                 <div class="sr-only"></div>
+                              </div>
+                              <div class="grid grid-cols-4 gap-1 text-xs">
+                                 <div>
+                                    <p class="font-semibold">Nama Baterai</p>
+                                    <p>Sebulu-001</p>
+                                    <p>Sebulu-002</p>
+                                    <p>Sebulu-003</p>
+                                    <p>Sebulu-004</p>
+                                 </div>
+                                 <div>
+                                    <p class="font-semibold">Jenis</p>
+                                    <p>LiPo Batt</p>
+                                    <p>LiPo Batt</p>
+                                    <p>LiPo Batt</p>
+                                    <p>LiPo Batt</p>
+                                 </div>
+                                 <div>
+                                    <p class="font-semibold">No. Asset</p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                 </div>
+                                 <div>
+                                    <p class="font-semibold">Kondisi Baterai</p>
+                                    <p>Sehat</p>
+                                    <p>Sehat</p>
+                                    <p>Sehat</p>
+                                    <p>Sehat</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="p-1">
+                              <p class="text-xs">Monitoring Baterai Link</p>
+                           </div>
+    
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-span-5">
+                     <div class="grid gap-2">
+                        <div>
+                           <div class="grid grid-cols-3 gap-2">
+                              <div class="col-span-2 border-2 border-orange-400 shadow">
+                                 <div class="w-1/3 bg-amber-300">
+                                    <p class="text-sm font-semibold pl-8"></p>
+                                 </div>
+                                 <div class="grid grid-cols-5 text-xs">
+                                    <div class="text-center">
+                                       <p class="font-semibold bg-amber-300">Foxtrot</p>
+                                       <p>PIT</p>
+                                       <p>Observer</p>
+                                    </div>
+                                    <div class="text-center text-[10px]">
+                                       <p class="font-semibold">Tanggal Masuk</p>
+                                       <p>3 Juni 2023</p>
+                                       <p>31 Mei 2024</p>
+                                    </div>
+                                    <div class="text-center text-[10px]">
+                                       <p class="font-semibold">Masa Kerja</p>
+                                       <p>1Th3Bln</p>
+                                       <p>0Th3Bln</p>
+                                    </div>
+                                    <div class="text-center text-[10px]">
+                                       <p class="font-semibold">Cuti Terakhir</p>
+                                       <p>April 2024</p>
+                                       <p>November 2024</p>
+                                    </div>
+                                    <div class="text-center text-[10px]">
+                                       <p class="font-semibold">Cuti Berikutnya</p>
+                                       <p>September 2024</p>
+                                       <p>-</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="border-2 border-orange-400 shadow">
+                                 <div class="w-full bg-amber-300">
+                                    <p class="text-sm text-center font-semibold">Team Hectare</p>
+                                 </div>
+                                 <div class="p-1 grid grid-cols-3 text-xs font-semibold">
+                                    <div class="space-y-3">
+                                       <p>Target</p>
+                                       <p>150</p>
+                                    </div>
+                                    <div class="space-y-3">
+                                       <p>MTD</p>
+                                       <p>126.0</p>
+                                       <p>84.00%</p>
+                                    </div>
+                                    <div class="space-y-3">
+                                       <p>Unit</p>
+                                       <p>126.0</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div>
+                           <div class="border-2 border-orange-400 shadow">
+                              <div class="w-1/2 bg-amber-300">
+                                 <p class="text-sm font-semibold pl-8">Operations Achievement</p>
+                              </div>
+                              <div class="grid grid-cols-2">
+                                 <div class="inline-block p-1 align-middle">
+                                    <table>
+                                       <thead>
+                                          <tr>
+                                             <th scope="col" class="text-[10px] text-left font-semibold text-gray-900 italic border border-gray-300 px-1">Month</th>
+                                             <th scope="col" class="text-[10px] text-left font-semibold text-gray-900 italic border border-gray-300 px-1">Achievement</th>
+                                             <th scope="col" class="text-[10px] text-left font-semibold text-gray-900 italic border border-gray-300 px-1">Target</th>
+                                             <th scope="col" class="text-[10px] text-left font-semibold text-gray-900 italic border border-gray-300 px-1">Ach(%)</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody class="">
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Januari</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Februari</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Maret</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">April</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Mei</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Juni</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Juli</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Agustus</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">September</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">126.0</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">150</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">84.0%</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Oktober</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">-</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">-</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">November</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">-</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">-</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                          <tr>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Desember</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">-</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">-</td>
+                                             <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1 font-semibold">DIV/!0</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <div class="mt-1 border border-gray-300">
+                                       <p class="text-xs text-center font-semibold">Hetare Productivity by Day (Sep 2024)</p>
+                                       <div id="hectar"></div>
+                                    </div>
+                                 </div>
+                                 <div class="border border-gray-300">
+                                    <p class="text-xs text-center font-semibold">Achievement vs Target by Team</p>
+                                    <div id="target"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-span-4">
+                     <div class="grid gap-2">
+                        <div>
+                           <div class="grid grid-cols-3 gap-2">
+                              <div class="col-span-2 border-2 border-orange-400 shadow">
+                                 <div class="w-full bg-amber-300">
+                                    <p class="text-sm text-center font-semibold">Team Revenue</p>
+                                 </div>
+                                 <div class="p-1 grid grid-cols-3 text-xs">
+                                    <div class="space-y-3">
+                                       <p class="font-semibold">Today</p>
+                                       <p>Rp0</p>
+                                    </div>
+                                    <div class="space-y-3">
+                                       <p class="font-semibold">MTD</p>
+                                       <p>Rp0</p>
+                                    </div>
+                                    <div class="space-y-3">
+                                       <p class="font-semibold">Unit</p>
+                                       <p>Rp0</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div>
+                                 <img class="w-auto" src="../dist/assets/img/frogs-sebulu.png" alt="frogs sebulu logo">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="border-2 border-orange-400 shadow">
+                            <div class="w-1/2 bg-amber-300">
+                              <p class="text-sm text-center font-semibold">Sales Achievement</p>
+                           </div>
+                           <div class="inline-block min-w-full p-1 align-middle">
+                              <table>
+                                 <thead>
+                                    <tr>
+                                       <th scope="col" class="text-[10px] text-left font-semibold text-gray-900 italic border border-gray-300 px-1">Month</th>
+                                       <th scope="col" class="text-[10px] text-left font-semibold text-gray-900 italic border border-gray-300 px-1 bg-cyan-400">Due</th>
+                                       <th scope="col" class="text-[10px] text-left font-semibold text-gray-900 italic border border-gray-300 px-1 bg-red-600">Over Due</th>
+                                       <th scope="col" class="text-[10px] text-left font-semibold text-gray-900 italic border border-gray-300 px-1 bg-green-600">Paid</th>
+                                       <th scope="col" class="text-[10px] text-left font-semibold text-gray-900 italic border border-gray-300 px-1">All Revenue</th>
+                                       <th scope="col" class="sr-only">All Revenue</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody class="">
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Januari</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rpxxx.xxx.xxxx</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 pl-6">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Februari</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rpxxx.xxx.xxxx</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 pl-6">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Maret</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rpxxx.xxx.xxxx</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 pl-6">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">April</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rpxxx.xxx.xxxx</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 pl-6">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Mei</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rpxxx.xxx.xxxx</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 pl-6">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Juni</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rpxxx.xxx.xxxx</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 pl-6">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Juli</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rpxxx.xxx.xxxx</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 pl-6">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Agustus</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rpxxx.xxx.xxxx</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 pl-6">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">September</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rpxxx.xxx.xxxx</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 pl-6">0,00%</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Oktober</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">November</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Desember</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1">Rp0</td>
+                                       <td class="whitespace-nowrap text-[10px] text-gray-900 text-center border border-gray-300 px-1"></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <p class="text-xs text-center font-semibold">Sales Status & Achievement Graph</p>
+                           <div id="sales"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+      <script src="../dist/assets/js/sales.js"></script>
+      <script src="../dist/assets/js/target.js"></script>
+      <script src="../dist/assets/js/hectar.js"></script>
+   </body>
+</html>

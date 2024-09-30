@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-white">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../dist/assets/css/app.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      <title>FrogsID - Dashboard V4</title>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+   </head>
+   <body class="antialiased h-full">
+      <div>
+         <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+         <div class="relative z-50 lg:hidden" role="dialog" aria-modal="true">
+            <!--
+            Off-canvas menu backdrop, show/hide based on off-canvas menu state.
+
+            Entering: "transition-opacity ease-linear duration-300"
+            From: "opacity-0"
+            To: "opacity-100"
+            Leaving: "transition-opacity ease-linear duration-300"
+            From: "opacity-100"
+            To: "opacity-0"
+         -->
+            <div class="fixed inset-0 bg-gray-900/80" aria-hidden="true"></div>
+
+            <div class="fixed inset-0 flex">
+               <!--
+            Off-canvas menu, show/hide based on off-canvas menu state.
+
+            Entering: "transition ease-in-out duration-300 transform"
+               From: "-translate-x-full"
+               To: "translate-x-0"
+            Leaving: "transition ease-in-out duration-300 transform"
+               From: "translate-x-0"
+               To: "-translate-x-full"
+            -->
+               <div class="relative mr-16 flex w-full max-w-xs flex-1">
+                  <!--
+               Close button, show/hide based on off-canvas menu state.
+
+               Entering: "ease-in-out duration-300"
+                  From: "opacity-0"
+                  To: "opacity-100"
+               Leaving: "ease-in-out duration-300"
+                  From: "opacity-100"
+                  To: "opacity-0"
+            -->
+                  <div class="absolute left-full top-0 flex w-16 justify-center pt-5">
+                     <button type="button" class="-m-2.5 p-2.5">
+                        <span class="sr-only">Close sidebar</span>
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                     </button>
+                  </div>
+
+                  <!-- Sidebar component, swap this element with another sidebar if you like -->
+                  <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-black px-6 pb-4 ring-1 ring-white/10">
+                     <div class="mt-4 flex flex-col h-16 shrink-0 items-center text-center text-white space-y-1">
+                        <h1 class="text-white font-semibold uppercase text-2xl">Frogs Solusi</h1>
+                        <p class="text-sm">Sales Company</p>
+                     </div>
+                     <nav class="flex flex-1 flex-col">
+                        <ul role="list" class="flex flex-1 flex-col gap-y-7">
+                           <li>
+                              <ul role="list" class="mx-3 space-y-1">
+                                 <li>
+                                    <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-sm font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                       <i class="fa-solid fa-gauge-simple-high"></i>
+                                       Distrik 1
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                       <i class="fa-solid fa-chart-simple"></i>
+                                       Distrik 2
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                       <i class="fa-regular fa-file-lines"></i>
+                                       Distrik 3
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="mt-auto">
+                              <ul role="list" class="mx-3 space-y-1">
+                                 <li>
+                                    <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                       <i class="fa-solid fa-bell"></i>
+                                       Notification
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                       <i class="fa-solid fa-gear"></i>
+                                       Settings
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                       <i class="fa-solid fa-right-from-bracket"></i>
+                                       Logout
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="mt-auto">
+                              <a href="#" class="group mx-3 flex items-center gap-x-3 rounded-full px-6 py-3.5 text-sm font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                 <i class="fa-solid fa-circle-question"></i>
+                                 Help
+                              </a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Static sidebar for desktop -->
+         <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
+            <!-- Sidebar component, swap this element with another sidebar if you like -->
+            <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-black px-6 pb-4">
+               <div class="mt-4 flex flex-col h-16 shrink-0 items-center text-center text-white space-y-1">
+                  <h1 class="font-semibold uppercase text-2xl">Frogs Solusi</h1>
+                  <p class="text-sm">Sales Company</p>
+               </div>
+               <nav class="flex flex-1 flex-col">
+                  <ul role="list" class="flex flex-1 flex-col gap-y-7">
+                     <li>
+                        <ul role="list" class="space-y-2">
+                           <li>
+                              <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                 <i class="fa-solid fa-gauge-simple-high"></i>
+                                 Distrik 1
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                 <i class="fa-solid fa-chart-simple"></i>
+                                 Distrik 2
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                 <i class="fa-regular fa-file-lines"></i>
+                                 Distrik 3
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="mt-auto">
+                        <ul role="list" class="space-y-2">
+                           <li>
+                              <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                 <i class="fa-solid fa-bell"></i>
+                                 Notification
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                 <i class="fa-solid fa-gear"></i>
+                                 Settings
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                                 <i class="fa-solid fa-right-from-bracket"></i>
+                                 Logout
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="mt-auto">
+                        <a href="#" class="group flex items-center gap-x-3 rounded-full px-6 py-3.5 text-base font-normal leading-6 text-white hover:bg-white hover:text-black">
+                           <i class="fa-solid fa-circle-question"></i>
+                           Help
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+
+         <!-- Top -->
+         <div class="lg:pl-72">
+            <div class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+               <button type="button" class="-m-2.5 p-2.5 text-gray-700 lg:hidden">
+                  <span class="sr-only">Open sidebar</span>
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+               </button>
+
+               <!-- Separator -->
+               <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
+
+               <div class="flex flex-1 items-center gap-x-4 self-stretch lg:gap-x-6">
+                  <div class="relative flex flex-1">
+                     <!-- <h2 class="text-2xl text-white font-semibold">Dashboard</h2> -->
+                     <div class="flex items-center gap-x-2">
+                        <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                        <div>
+                           <p class="uppercase font-semibold">Aris Pratama</p>
+                           <p class="text-xs">Supervisor</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="flex items-center gap-x-4">
+                     <div>
+                        <div class="relative mt-2 rounded-md shadow-sm">
+                           <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-1">
+                              <div class="bg-green-700 text-white rounded-full py-1 px-1.5">
+                                 <i class="fa-solid fa-magnifying-glass fa-fw"></i>
+                              </div>
+                           </div>
+                           <input type="search" name="search" id="search" class="block w-full rounded-full border-0 py-2 pl-14 text-gray-900 ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-700 sm:text-sm sm:leading-6" placeholder="Search here">
+                        </div>
+                     </div>
+
+                     <!-- Profile dropdown -->
+                     <div class="relative">
+                        <a href="#" class="flex items-center gap-x-2 bg-green-700 text-white font-semibold py-2 px-5 rounded-full">
+                           <i class="fa-solid fa-plus"></i>
+                           Add Product
+                        </a>
+
+                        <!--
+                        Dropdown menu, show/hide based on menu state.
+
+                        Entering: "transition ease-out duration-100"
+                           From: "transform opacity-0 scale-95"
+                           To: "transform opacity-100 scale-100"
+                        Leaving: "transition ease-in duration-75"
+                           From: "transform opacity-100 scale-100"
+                           To: "transform opacity-0 scale-95"
+                        -->
+                        <!-- <div class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                           <a href="#" class="block px-3 py-1 text-sm leading-6 text-gray-900" role="menuitem" tabindex="-1" id="user-menu-item-0">Your profile</a>
+                           <a href="#" class="block px-3 py-1 text-sm leading-6 text-gray-900" role="menuitem" tabindex="-1" id="user-menu-item-1">Sign out</a>
+                        </div> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <main class="w-full py-6">
+               <div class="px-4 sm:px-6 lg:px-8">
+
+                  <div class="flex justify-between items-end">
+                     <h2 class="text-3xl font-semibold">Distrik 1</h2>
+                     <div class="flex gap-x-2">
+                        <p class="font-semibold">Show All</p>
+                        <i class="fa-solid fa-sort-down"></i>
+                     </div>
+                  </div>
+
+                  <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+                     <!-- section 1 -->
+                     <div class="col-span-2 grid gap-5">
+                        <div class="rounded-3xl border border-gray-700 shadow p-4 sm:p-6">
+                           <div class="flex justify-between items-center">
+                              <h3 class="text-base sm:text-lg font-semibold leading-6">Total Sales</h3>
+                              <div class="flex items-center gap-x-3">
+                                 <div class="flex items-center gap-x-1">
+                                    <i class="fa-solid fa-circle fa-2xs text-green-700"></i>
+                                    <p class="text-sm">Best Sales</p>
+                                 </div>
+                                 <div class="flex items-center gap-x-1">
+                                    <i class="fa-solid fa-circle fa-2xs text-orange-500"></i>
+                                    <p class="text-sm">Best Product</p>
+                                 </div>
+                                 <div class="flex gap-x-2">
+                                    <p class="text-sm font-semibold"><span class="font-normal">Sort By</span> Sales</p>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id="chart"></div>
+                        </div>
+
+                        <div class="rounded-3xl border border-gray-700 shadow p-4 sm:p-6">
+                           <div class="flex justify-between items-center">
+                              <h3 class="text-base sm:text-lg font-semibold leading-6">Messages</h3>
+                              <div class="flex gap-x-2">
+                                 <p class="text-sm font-medium">Show All</p>
+                                 <i class="fa-solid fa-sort-down"></i>
+                              </div>
+                           </div>
+
+                           <div class="mt-4 flex justify-between items-center">
+                              <div class="flex justify-between items-center flex-wrap gap-x-3">
+                                 <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                                 <div>
+                                    <div class="flex justify-between">
+                                       <p class="font-semibold">Shawn Gracia</p>
+                                       <p class="text-sm text-gray-500">5m ago</p>
+                                    </div>
+                                    <p class="text-sm text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+                                 </div>
+                              </div>
+                              <button class="bg-green-700 text-white text-xs font-semibold rounded-full py-1.5 px-6">Reply</button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- section 2 -->
+                     <div class="grid gap-5">
+                        <div class="rounded-3xl border border-gray-700 text-white bg-green-700 p-4 sm:p-6">
+                           <h3 class="text-base sm:text-lg font-semibold leading-6 text-center">Total Earnings</h3>
+                           <div class="mt-4 space-y-4">
+                              <div class="flex items-start justify-center font-semibold gap-x-2">
+                                 <p>$</p>
+                                 <p><span class="text-6xl">3000</span>,00</p>
+                              </div>
+                              <div class="flex items-center gap-x-2">
+                                 <i class="fa-solid fa-arrow-trend-up"></i>
+                                 <p class="font-normal"><span class="font-semibold">Up to 10%</span> From Last Year</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="rounded-3xl border border-gray-700 text-black bg-yellow-600 p-4 sm:p-6">
+                           <h3 class="text-base sm:text-lg font-semibold leading-6 text-center">Total Orders</h3>
+                           <div class="mt-4 space-y-4">
+                              <div class="flex items-start justify-center font-semibold gap-x-2 ">
+                                 <p>$</p>
+                                 <p><span class="text-6xl">2.750</span>,00</p>
+                              </div>
+                              <div class="flex items-center gap-x-2">
+                                 <i class="fa-solid fa-arrow-trend-up"></i>
+                                 <p class="font-normal"><span class="font-semibold">Up to 6%</span> From Last Year</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="rounded-3xl border border-gray-700 text-white bg-black p-4 sm:p-6">
+                           <h3 class="text-base sm:text-lg font-semibold leading-6 text-center">Total Ratings</h3>
+                           <div class="mt-4 space-y-4 text-center">
+                              <p><span class="text-6xl">6.5%</span></p>
+                              <div class="flex items-center gap-x-2">
+                                 <i class="fa-solid fa-arrow-trend-up"></i>
+                                 <p class="font-normal"><span class="font-semibold">Up to 7%</span> From Last Year</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </main>
+         </div>
+      </div>
+      <script src="../dist/assets/js/app.js"></script>
+   </body>
+</html>
